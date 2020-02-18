@@ -1,5 +1,6 @@
 import React from 'react';
 import MainPlanPlan from "./plans/mainPlanPanel"
+import '../css/App.css'
 
 function App() {
   return (

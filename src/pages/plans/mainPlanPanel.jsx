@@ -2,8 +2,7 @@ import React from "react";
 import MealCard from "./mealCard"
 
 class mealCard extends React.Component {
-    state = {};
-
+    
     render() {
         return (
             <div>

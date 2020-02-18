@@ -2,7 +2,6 @@ import React from "react";
 
 
 class mealCard extends React.Component {
-    state = {};
 
     render() {
         return (
