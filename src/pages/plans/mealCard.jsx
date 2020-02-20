@@ -1,16 +1,23 @@
 import React from "react";
 
 
-class mealCard extends React.Component {
+class MealCard extends React.Component {
 
     render() {
         return (
-            <div>
-                <h>Meal Card</h>  
+            <div className="meal-card">
+                <div className="day-column">Monday</div>
+                <div className="img-column">Image</div>
+                <ul className="detail-column">
+                    <li>Breakfast</li>
+                    <li>Lunch</li>
+                    <li>Dinner</li>
+                </ul>
+                <div>Edit</div>
             </div>
         )
     }
 
 }
 
-export default mealCard;
+export default MealCard;

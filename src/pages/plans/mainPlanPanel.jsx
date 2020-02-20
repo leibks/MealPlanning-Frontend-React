@@ -1,12 +1,13 @@
 import React from "react";
-import MealCard from "./mealCard"
+import MealCard from "./MealCard"
+import "../../styles/plans.scss"
 
-class mealCard extends React.Component {
+class MealPlanPanel extends React.Component {
     
     render() {
         return (
-            <div>
-                <h3>Main Plans</h3> 
+            <div className="plan-panel">
+                <h1>Weekly Plans</h1> 
                 <MealCard></MealCard>
                 <MealCard></MealCard>
                 <MealCard></MealCard>
@@ -16,4 +17,4 @@ class mealCard extends React.Component {
 
 }
 
-export default mealCard;
+export default MealPlanPanel;

@@ -1,11 +1,15 @@
 import React from 'react';
-import MainPlanPlan from "./plans/mainPlanPanel"
-import '../css/App.css'
+import MainPlanPlan from "./plans/MainPlanPanel"
+import AppHeader from "./AppHeader"
+import '../styles/Layout.scss'
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
+      <div className="main-panel">
+      <AppHeader></AppHeader>
       <MainPlanPlan></MainPlanPlan>
+      </div>
     </div>
   );
 }
