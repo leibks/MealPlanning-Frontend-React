@@ -1,13 +1,71 @@
+@import "./variables.scss";
+
 .app {
   height: 900px;
 }
 
 .app-header {
-  height: 50px;
-  background-color: #ffffff;
+  height: 65px;
+  background-color: $main-background-color;
+  box-shadow: 0 0 8px 0 #a6a6a6;
+  z-index: 9;
 }
 
 .main-panel {
-  margin-left: 15%;
-  margin-right: 15%;
+  position: absolute;
+  width: 65%;
+  padding-left:  6%;
+  padding-right: 6%;
+  background-color: #e6ecff;
 }
+
+.has-side-panel {
+  width: 70%;
+  padding-left:  15%;
+  padding-right: 15%;
+}
+
+.side-panel {
+  width: 300px;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  box-shadow: 0 0 10px 0 #a6a6a6;
+  background-color: white;
+  z-index: 99;
+  overflow-y: scroll;
+
+  .side-header {
+    height: 60px;
+    border-bottom: 1px solid #efeff5;
+    background-color: #d1d1e0;
+
+    .close {
+      position: absolute;
+      cursor: pointer;
+      right: 0px;
+      padding: 18px 15px;
+      color: #bfbfbf;
+
+      &:hover {
+        color: #1a1a1a;
+      }
+    }
+  }
+
+  .side-content {
+    height: 800px;
+    
+    .content-component {
+      background-color: $main-background-color;
+      margin-bottom: 10px;
+      height: calc((100% - 10px) / 3);
+    }
+
+    :last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
+
