@@ -1,9 +1,14 @@
 import React from 'react';
-import MainPlanPanel from "./plans/MainPlanPanel";
+import MainSchedulePanel from "./schedule/MainSchedulePanel";
+import PlanPanel from "./plans/PlanPanel"
 import SidePanel from "./SidePanel"
 import AppHeader from "./AppHeader";
-import '../styles/Layout.scss';
+import '../styles/layout.scss';
 import { HashRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+
+import { createHashHistory } from 'history'
+
+const history = createHashHistory()
 
 class App extends React.Component {
 
@@ -12,6 +17,15 @@ class App extends React.Component {
     this.state = {
       showSidePanel: false
     };
+  }
+
+  componentDidMount() {
+    // detect the route change
+    history.listen(location => {
+      window.scrollTo(0, 0);
+      this.updateSidePanel(false)
+    });
+
   }
 
   // close or open the side panel
@@ -31,12 +45,19 @@ class App extends React.Component {
     return (
       <div className="app">
         <Router>
-          <AppHeader></AppHeader>
-          <div className={`main-panel ${this.state.showSidePanel ? "" : "has-side-panel"}`}>
+          <AppHeader showSidePanel={this.state.showSidePanel} ></AppHeader>
+          <div className={`main-panel ${this.state.showSidePanel ? "" : "main-panel-not-side"}`}>
             <Switch>
-              <Route path="/" exact render={() => { return <Redirect to="/mainPlans" /> }} />
-              <Route path="/mainPlans"
-                render={() => (<MainPlanPanel updateSidePanel={this.updateSidePanel}></MainPlanPanel>)} />
+              <Route path="/" exact render={() => { return <Redirect to="/schedule" /> }} />
+              <Route path="/schedule"
+                render={() => (
+                  <MainSchedulePanel
+                    updateSidePanel={this.updateSidePanel}>
+                  </MainSchedulePanel>)} />
+              <Route path="/plans"
+                render={() =>
+                  (<PlanPanel>
+                  </PlanPanel>)} />
             </Switch>
           </div>
           {sidePanel}

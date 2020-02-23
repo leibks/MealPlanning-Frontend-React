@@ -1,98 +1,41 @@
 @import "./variables.scss";
 
 .plan-panel {
-    margin-left: 5%;
-    margin-right: 5%;
-    h1 {
+    height: 800px;
+
+    h2 {
         text-align: center;
     }
 
-    .meal-card {
-        max-width: 720px;
-        min-width: 420px;
-        height: 100px;
-        background-color: $main-background-color;
+    .plan-cards {
         display: flex;
-        border: 2px solid #e6f5ff;
-        border-radius: 10px;
-        margin: 20px;
-        cursor: pointer;
+        flex-wrap: wrap;
 
-        &:hover {
-            border: 2px solid $main-background-color;
-            background-color: #ccebff;
+        .plan-card {
+            width: calc((100% - 60px) / 3);
+            height: 300px;
+            padding: 0;
+            margin: 10px 10px;
+            background-color: $main-background-color;
         }
-        
-        .day-column {
-            width: 18%;
-            padding-top: 36px;
-            padding-bottom: 36px;
-            font-size: 20px;
-            text-align: center;
-        }
-    
-        .img-column {
-            width: 15%;
-            margin-top: 15px;
-            margin-bottom: 10px;
-            margin-left: 20px;
-        }
-    
-        .detail-column {
-            width: 45%;
-            margin-top: 18px;
-            margin-bottom: 18px;
-            margin-right: 10px;
-            border-radius: 5px;
-            display: flex;
-            list-style-type: none;
 
-            div {
-                width: 30%;
-                border-radius: 5px;
-                padding: 18px;
-                text-align: center;
-
-                &:hover {
-                    background-color: #99d6ff;
-                }
-
-                &:active {
-                    font-weight: bold;
-                }
+        :last-child {
+            background-color: #e6f9ff;
+            cursor: pointer;
+            
+            img {
+                margin: 110px calc((100% - 80px) / 2);
+                border: none;       
             }
 
-        }
-
-        .edit-column {
-            width: 10%;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            margin-left: 3%;
-
-            .edit-img {
-                height: 40px;
-                width: 40px;
-                background-color: white;
-                border-radius: 25px;
-                background-color: $icon-position-color;
-
-                &:hover {
-                    background-color: #b3edff;
-                }
-
-                &:active {
-                    background-color: #99e7ff;
-                }
+            &:active {
+                background-color: #b3edff;
 
                 img {
-                    padding: 6px;
+                    background-color: #b3edff;
                 }
             }
         }
-    
-    }    
+    }
+
 }
-
-
-

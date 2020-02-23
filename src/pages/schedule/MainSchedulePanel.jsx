@@ -1,6 +1,6 @@
 import React from "react";
 import MealCard from "./MealCard";
-import "../../styles/plans.scss";
+import "../../styles/schedule.scss";
 
 import food1 from "../../images/food1.svg"
 import food2 from "../../images/food2.svg"
@@ -38,8 +38,8 @@ class MealPlanPanel extends React.Component {
         }
 
         return (
-            <div className="plan-panel">
-                <h1>Weekly Plans</h1>
+            <div className="schedule-panel">
+                <h2>Weekly Plans</h2>
                 {mealCards}
             </div>
         )

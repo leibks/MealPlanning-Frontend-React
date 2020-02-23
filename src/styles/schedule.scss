@@ -1,0 +1,102 @@
+@import "./variables.scss";
+
+.schedule-panel {
+    margin-left: 5%;
+    margin-right: 5%;
+    
+    h2 {
+        text-align: center;
+    }
+
+    .meal-card {
+        max-width: 780px;
+        min-width: 420px;
+        height: 100px;
+        background-color: $main-background-color;
+        display: flex;
+        border: 2px solid #e6f5ff;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        cursor: pointer;
+
+        &:hover {
+            border: 2px solid $main-background-color;
+            background-color: #ccebff;
+        }
+        
+        .day-column {
+            width: 20%;
+            padding-top: 36px;
+            padding-bottom: 36px;
+            font-size: 20px;
+            text-align: center;
+        }
+    
+        .img-column {
+            width: 15%;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+    
+        .detail-column {
+            width: 50%;
+            margin-top: 18px;
+            margin-bottom: 18px;
+            border-radius: 5px;
+            display: flex;
+            list-style-type: none;
+
+            div {
+                width: 40%;
+                border-radius: 5px;
+                padding-top: 20px;
+                padding-bottom: 15px;
+                text-align: center;
+
+                &:hover {
+                    background-color: #99d6ff;
+                }
+
+                &:active {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .edit-column {
+            width: 15%;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-left: 3%;
+
+            .edit-img {
+                height: 40px;
+                width: 40px;
+                background-color: white;
+                border-radius: 25px;
+                background-color: $icon-position-color;
+
+                &:hover {
+                    background-color: #b3edff;
+                }
+
+                &:active {
+                    background-color: #99e7ff;
+                }
+
+                img {
+                    padding: 6px;
+                }
+            }
+        }
+    
+    }    
+}
+
+@media only screen and (max-width: 470px) {
+    .schedule-panel {
+      margin: 0px;
+    }
+  }
+
