@@ -9,6 +9,11 @@ import foodProcessor from "../../images/foodProcessor.svg"
 import cannedFood from "../../images/cannedFood.svg"
 import lobster from "../../images/lobster.svg"
 import foodVendor from "../../images/foodVendor.svg"
+import pick from "../../images/pick.svg"
+import save from "../../images/save.svg"
+import leftArrow from "../../images/leftArrow.svg"
+import rightArrow from "../../images/rightArrow.svg"
+import calendar from "../../images/calendar.svg"
 
 const dayOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 const dayImg = [food1, food2, foodMachine, foodProcessor, cannedFood, lobster, foodVendor]
@@ -39,7 +44,29 @@ class MealPlanPanel extends React.Component {
 
         return (
             <div className="schedule-panel">
-                <h2>Weekly Plans</h2>
+                <div className="operations-colletion">
+                    <div className="calendar-item">
+                        
+                        <img src={calendar} alt=""/>
+                    </div>
+                    <div className="general-items">
+                        <span className="radius-btn red-btn">
+                            <img src={pick} alt="" />
+                            Plans
+                        </span>
+                        <span className="radius-btn green-btn ">
+                            <img src={save} alt="" />
+                            Save
+                        </span>
+                    </div>
+                    <div className="switch-day-item">
+                        <span className="left-arrow"><img src={leftArrow} alt=""/></span>
+                        <span className="left-date">5/4/2020</span> 
+                        <span className="text">Weekly Plans</span> 
+                        <span className="right-arrow"><img src={rightArrow} alt=""/></span>
+                        <span className="right-date">5/10/2020</span>    
+                    </div>
+                </div>
                 {mealCards}
             </div>
         )

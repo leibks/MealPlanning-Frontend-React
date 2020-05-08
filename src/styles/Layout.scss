@@ -7,9 +7,11 @@
 .app-header {
   width: 100%;
   height: 60px;
-  background-color: $main-background-color;
+  background-color: $header-color;
   z-index: 9;
+  color: white;
   margin-bottom: 15px;
+  font-family: Verdana;
 
   .navbar-brand {
     width: 15%;
@@ -29,19 +31,24 @@
     padding-left: 48%;
     margin: 0px !important;
 
-    .nav-link {
+    a {
       font-size: 16px;
       float: right;
-      margin: 0px 5%;
+      margin: 7px 5%;
+      color: #808080;
       cursor: pointer;
-
+      
       &:hover {
-        color: #3e515b !important;
+        color: white !important;
+        text-decoration: none;
       }
 
-      &:active, &:focus {
-        color: #29363d !important;
+      &.active {
+        color: white;
+        border-bottom: 1px solid #ff6666;
       }
+
+
     }
   }
 }
@@ -52,6 +59,7 @@
 
 .main-panel {
   position: absolute;
+  min-width: 375px;
   width: calc(100% - 300px);
   padding-left:  calc((100% - 300px) * 0.05);
   padding-right: calc((100% - 300px) * 0.05);
@@ -71,8 +79,7 @@
   right: 0px;
   bottom: 0px;
   box-shadow: 0 0 10px 0 #a6a6a6;
-  background-color: #f0f0f5;
-  z-index: 99;
+  background-color: white;
   overflow-y: scroll;
 
   .side-header {
@@ -96,7 +103,7 @@
     height: 800px;
     
     .content-component {
-      background-color: $main-background-color;
+      // background-color: $main-background-color;
       margin-bottom: 10px;
       height: calc((100% - 10px) / 3);
     }
@@ -119,5 +126,43 @@
   .main-panel {
     width: 100%;
     margin: 0px;
+  }
+}
+
+// all utils of components
+.radius-btn {
+  color: #fff;
+  width: auto;
+  border-radius: 25px;
+  min-width: 135px;
+  height: 55px;
+  line-height: 50px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  &.red-btn {
+    background-color: red;
+
+    &:hover {
+      background-color: #ff4d4d;
+    }
+
+    &:active {
+      background-color: #ff9999;
+    }
+  }
+
+  &.green-btn {
+    background-color: #16c2c2;
+
+    &:hover {
+      background-color: #5eeded;
+    }
+
+    &:active {
+      background-color: #baf7f7;
+    }
   }
 }

@@ -1,17 +1,26 @@
 import React from "react";
 import { Navbar, Nav } from 'react-bootstrap'
 import brand from "../images/brand.svg"
+import { NavLink } from 'react-router-dom';
 
 class AppHeader extends React.Component {
+
+    componentDidMount() {
+
+    }
 
     render() {
         return (
             <div className={`app-header ${this.props.showSidePanel ? "app-header-show-side" : ""}`} >
-                <Navbar bg="$main-background-color" variant="light">
+                <Navbar bg="$header-color" variant="dark">
                     <Navbar.Brand href="/">Meal<img src={brand} alt="" />Master</Navbar.Brand>
-                    <Nav className="mr-auto">
-                        <Nav.Link href="#schedule">Schedule</Nav.Link>
-                        <Nav.Link href="#plans">Plans</Nav.Link>
+                    <Nav>
+                        <NavLink exact to="/schedule">
+                            Schedule
+                        </NavLink>
+                        <NavLink exact to="/plans">
+                            Plans
+                        </NavLink>
                     </Nav>
                 </Navbar>
             </div>

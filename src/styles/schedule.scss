@@ -8,8 +8,89 @@
         text-align: center;
     }
 
+    .operations-colletion {
+        height: 180px;
+        text-align: center;
+        padding-top: 10px;
+        position: relative;
+
+        .general-items {
+            margin-bottom: 60px;
+            height: 55px;
+            font-size: 18px;
+            display: flex;
+            justify-content: left;
+
+            span {
+                margin: 0px 10px;
+            }
+            img {
+                margin-right: 12px;
+            }
+        }
+
+        .calendar-item {
+            position: absolute;
+            right: 0;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .switch-day-item {
+            margin-top: 20px;
+            height: 60px;
+            max-width: 1000px;
+            font-size: 20px;
+
+            .left-arrow {
+                float: left;
+                cursor: pointer;
+                background-color: silver;
+                border-radius: 5px;
+
+                &:active {
+                    background-color: #e6e6e6;
+                }
+            }
+            .left-date {
+                float: left;
+                margin: 16px 20px;
+            }
+            .text {
+                font-size: 34px;
+                font-weight: 500;
+                margin: 16px 20px;
+            }
+            @media only screen and (max-width: 1024px) {
+                & {
+                    font-size: 16px;
+                }
+
+                .text {
+                    font-size: 24px;
+                    margin: 0px;
+                }
+              }
+              
+            .right-date {
+                float: right;
+                margin: 16px 20px;
+            }
+            .right-arrow {
+                float: right;
+                cursor: pointer;
+                background-color: silver;
+                border-radius: 5px;
+
+                &:active {
+                    background-color: #e6e6e6;
+                }
+            }
+        }
+    }
+
     .meal-card {
-        max-width: 780px;
+        max-width: 1000px;
         min-width: 420px;
         height: 100px;
         background-color: $main-background-color;
@@ -22,7 +103,7 @@
 
         &:hover {
             border: 2px solid $main-background-color;
-            background-color: #ccebff;
+            background-color: $main-hover-background-light-color;
         }
         
         .day-column {
@@ -48,14 +129,14 @@
             list-style-type: none;
 
             div {
-                width: 40%;
+                width: 38%;
                 border-radius: 5px;
                 padding-top: 20px;
-                padding-bottom: 15px;
+                padding-bottom: 20px;
                 text-align: center;
 
                 &:hover {
-                    background-color: #99d6ff;
+                    background-color: $main-hover-background-bold-color;
                 }
 
                 &:active {
@@ -78,11 +159,11 @@
                 background-color: $icon-position-color;
 
                 &:hover {
-                    background-color: #b3edff;
+                    background-color: $main-hover-icon-color;
                 }
 
                 &:active {
-                    background-color: #99e7ff;
+                    background-color: $main-hover-background-bold-color;
                 }
 
                 img {

@@ -10,10 +10,7 @@ class PlanPanel extends React.Component {
         let planCards = []
         for (let i = 0; i < 5; i++) {
             planCards.push(
-                <PlanCard
-                    key={i}
-                >
-                </PlanCard>
+                <PlanCard key={i}></PlanCard>
             )
         }
 
