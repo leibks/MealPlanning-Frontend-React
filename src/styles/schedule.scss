@@ -17,7 +17,7 @@
         .general-items {
             margin-bottom: 60px;
             height: 55px;
-            font-size: 18px;
+            font-size: 16px;
             display: flex;
             justify-content: left;
 
@@ -25,14 +25,15 @@
                 margin: 0px 10px;
             }
             img {
-                margin-right: 12px;
+                margin-right: 10px;
             }
         }
 
         .calendar-item {
             position: absolute;
             right: 0;
-            margin: 10px;
+            margin-right: 15px;
+            margin-top: 5px;
             cursor: pointer;
         }
 
@@ -129,8 +130,9 @@
             list-style-type: none;
 
             div {
-                width: 38%;
-                border-radius: 5px;
+                width: 30%;
+                line-height: 18px;
+                border-radius: 8px;
                 padding-top: 20px;
                 padding-bottom: 20px;
                 text-align: center;

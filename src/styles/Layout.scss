@@ -14,7 +14,7 @@
   font-family: Verdana;
 
   .navbar-brand {
-    width: 15%;
+    width: 20%;
     font-family:Palatino Linotype;
 
     img {
@@ -25,16 +25,18 @@
 
   .navbar-nav {
     height: 40px;
-    width: 70%;
+    width: 65%;
     color: #95abb7 !important;
-    padding: 0px;
-    padding-left: 48%;
-    margin: 0px !important;
+    display: inline-block;
+
+    &.profile-nav {
+      width: 15%;
+    }
 
     a {
-      font-size: 16px;
       float: right;
-      margin: 7px 5%;
+      font-size: 16px;
+      margin: 6px 20px;
       color: #808080;
       cursor: pointer;
       
@@ -134,9 +136,9 @@
   color: #fff;
   width: auto;
   border-radius: 25px;
-  min-width: 135px;
-  height: 55px;
-  line-height: 50px;
+  min-width: 120px;
+  height: 46px;
+  line-height: 40px;
   display: inline-block;
   position: relative;
   overflow: hidden;

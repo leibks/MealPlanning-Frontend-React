@@ -15,13 +15,10 @@ class AppHeader extends React.Component {
                 <Navbar bg="$header-color" variant="dark">
                     <Navbar.Brand href="/">Meal<img src={brand} alt="" />Master</Navbar.Brand>
                     <Nav>
-                        <NavLink exact to="/schedule">
-                            Schedule
-                        </NavLink>
-                        <NavLink exact to="/plans">
-                            Plans
-                        </NavLink>
+                        <NavLink exact to="/plans">Plans</NavLink>
+                        <NavLink exact to="/schedule">Schedule</NavLink>
                     </Nav>
+                    <Nav className="profile-nav"></Nav>
                 </Navbar>
             </div>
         )
